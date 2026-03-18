@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clean Dropdown</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="short icon" href="./images/favicon.ico/favicon.ico">
+
+  <link rel="stylesheet" href="./css/css.css">
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+  <header id="header">
+    <nav>
+      <h1 class="logo">
+        <a href="#">
+          <img src="./images/LOGO.svg" alt="사이트 로고">
+        </a>
+      </h1>
+      
+
+      <ul class="menu">
+        <li>
+          <a href="#" data-menu>레고소개</a>
+          <ul class="submenu">
+            <li><a href="#">레고 그룹 소개</a></li>
+            <li><a href="#">레고 뉴스 소식</a></li>
+            <li><a href="#">채용정보</a></li>
+            <li><a href="#">레고 앱</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" data-menu>레고스토어</a>
+          <ul class="submenu">
+            <li><a href="#">레고 전제품</a></li>
+            <li><a href="#">연령별</a></li>
+            <li><a href="#">가격별</a></li>
+            <li><a href="#">관심분야별</a></li>
+            <li><a href="#">특별한 날의 세트</a></li>
+            <li><a href="#">할인 및 행사</a></li>
+            <li><a href="#">레고 굿즈</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" data-menu>신제품</a>
+        </li>
+        <li>
+          <a href="#" data-menu>고객지원</a>
+          <ul class="submenu">
+            <li><a href="#">주문현황</a></li>
+            <li><a href="#">부속품 문의</a></li>
+            <li><a href="#">배송문의</a></li>
+            <li><a href="#">제품리콜</a></li>
+            <li><a href="#">문의하기</a></li>
+            <li><a href="#">조립설명서 찾기</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" data-menu>플레이존</a>
+        </li>
+        <li>
+          <a href="#" data-menu>이벤트</a>
+        </li>
+      </ul>
+
+      <div class="nav-right">
+        <div class="search-box">
+          <input type="text" placeholder="검색어를 입력해주세요">
+        </div>
+        <button class="main-btn1">로그인</button>
+        <a href="#"><img src="./images/cart_whith_icon .svg" alt="장바구니" class="header-icon"></a>
+        <a href="#"><img src="./images/heart.svg" alt="찜" class="header-icon"></a>
+      </div>
+      
+      <button class="hamburger" aria-label="메뉴 열기">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+    <div class="submenu-bg"></div>
+  </header>
+<!--헤더 끝-->
+
+
+  <div class="login-modal">
+    <div class="login-modal-box">
+      <button class="modal-close">×</button>
+      <h2 class="modal-text"><img src="./images/lego_face.svg" alt="레고얼굴">LEGO® Insiders</h2>
+      <p class="modal-text">구매할 때마다 포인트를 적립하고, <br> 회원 전용 혜택도 누려보세요.</p>
+      <input type="text" placeholder="아이디">
+      <input type="password" placeholder="비밀번호">
+
+      <button class="main-btn1">로그인</button>
+      <button class="main-btn1">회원가입</button>
+
+    </div>
+  </div>
+
+  <main>
+    <section id="main">
+      <div class="main-container">
+        <div class="main-box">
+          <h1>인기 게임과 브릭의 콜라보</h1>
+          <p>요즘 가장 인기 있는 비디오 게임을 소재로 한 레고세트를 만나보세요. </p>
+
+          <div class="main-btn">
+            <button class="main-btn1">쇼핑하기</button>
+            <button class="main-btn1">자세히 보기</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-visual">
+        <img src="./images/blue.svg" class="trio-img img-1" data-aos="zoom-in-down" alt="콜라보">
+        <img src="./images/purple.svg" class="trio-img img-2" data-aos="zoom-in-down" alt="콜라보">
+        <img src="./images/green.svg" class="trio-img img-3" data-aos="zoom-in-down" alt="콜라보">
+      </div>
+    </section>
+
+
+
+    <section id="item-container">
+      <div class="blur-box">
+        <img src="./images/blur01.svg" class="blur blur01" alt="블러">
+        <img src="./images/blur02.svg" class="blur blur02" alt="블러">
+      </div>
+
+
+      <div class="main-menu">
+        <ul class="nav nav-tabs best-tab" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link menu-tab active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+              type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">새소식</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link menu-tab" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+              type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">선물하기</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link menu-tab" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane"
+              type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">콜라보</button>
+          </li>
+        </ul>
+
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+            tabindex="0">
+            <div class="swiper best-swiper ">
+              <div class="swiper-wrapper best-box">
+                <div class="swiper-slide">
+                  <img src="./images/best-image/best08.jpg" alt="목록">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/best-image/best07.jpg" alt="목록">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/best-image/best06.jpg" alt="목록">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/best-image/best05.jpg" alt="목록">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/best-image/best04.jpg" alt="목록">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/best-image/best03.jpg" alt="목록">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/best-image/best02.jpg" alt="목록">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/best-image/best01.jpg" alt="목록">
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+            <div class="swiper best-swiper">
+              <div class="swiper-wrapper best-box">
+                <div class="swiper-slide">
+                  <img src="./images/gift-image/gift08.jpg" alt="목록">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/gift-image/gift02.jpg" alt="목록">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/gift-image/gift04.jpg" alt="목록">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/gift-image/gift01.jpg" alt="목록">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/gift-image/gift03.jpg" alt="목록">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/gift-image/gift07.jpg" alt="목록">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/gift-image/gift06.jpg" alt="목록">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/gift-image/gift05.jpg" alt="목록">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+            <div class="swiper best-swiper">
+              <div class="swiper-wrapper best-box">
+                <div class="swiper-slide">
+                  <img src="./images/best-image/best08.jpg" alt="목록">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/best-image/best07.jpg" alt="목록">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/best-image/best06.jpg" alt="목록">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/best-image/best05.jpg" alt="목록">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/best-image/best04.jpg" alt="목록">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/best-image/best03.jpg" alt="목록">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/best-image/best02.jpg" alt="목록">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/best-image/best01.jpg" alt="목록">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+    <section id="set-container">
+
+      <div class="swiper product-swiper">
+        <h2 class="set-tab">추천 레고세트</h2>
+
+        <div class="swiper-wrapper">
+          <!-- slide 1 -->
+          <div class="swiper-slide">
+            <article class="product-card">
+              <button class="bookmark-btn" aria-label="찜하기">♥</button>
+
+              <a href="#" class="product-link">
+                <div class="product-image">
+                  <img src="./images/set-image/set01.svg" alt="침대">
+                </div>
+
+                <div class="product-info">
+                  <h3 class="product-name">
+                    Oracle Red Bull Racing RB20 F1® 레이스 카
+                  </h3>
+
+                  <div class="price-area">
+                    <span class="set-price">45,000원</span>
+                  </div>
+
+                  <div class="badge-area">
+                    <span class="badge">무료배송</span>
+                    <span class="badge badge2">독점제품</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+
+          <!-- slide 2 -->
+          <div class="swiper-slide">
+            <article class="product-card">
+              <button class="bookmark-btn" aria-label="찜하기">♥</button>
+              <a href="#" class="product-link">
+                <div class="product-image">
+                  <img src="./images/set-image/set02.svg" alt="침대">
+
+                </div>
+
+                <div class="product-info">
+                  <h3 class="product-name">
+                    Oracle Red Bull Racing RB20 F1® 레이스 카
+                  </h3>
+
+                  <div class="price-area">
+                    <span class="set-price">725,940원</span>
+                  </div>
+
+                  <div class="badge-area">
+                    <span class="badge">무료배송</span>
+                    <span class="badge badge2">독점제품</span>
+                    <span class="badge best-badge">인기제품</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+
+          <!-- slide 3 -->
+          <div class="swiper-slide">
+            <article class="product-card">
+              <button class="bookmark-btn" aria-label="찜하기">♥</button>
+              <a href="#" class="product-link">
+                <div class="product-image">
+                  <img src="./images/set-image/set03.svg" alt="침대">
+
+                </div>
+
+                <div class="product-info">
+                  <h3 class="product-name">
+                    Oracle Red Bull Racing RB20 F1® 레이스 카
+                  </h3>
+
+                  <div class="price-area">
+                    <span class="set-price">725,940원</span>
+                  </div>
+
+                  <div class="badge-area">
+                    <span class="badge">무료배송</span>
+                    <span class="badge badge2">독점제품</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+
+          <!-- slide 4 -->
+          <div class="swiper-slide">
+            <article class="product-card">
+              <button class="bookmark-btn" aria-label="찜하기">♥</button>
+              <a href="#" class="product-link">
+                <div class="product-image">
+                  <img src="./images/set-image/set04.svg" alt="침대">
+
+                </div>
+
+                <div class="product-info">
+                  <h3 class="product-name">
+                    Oracle Red Bull Racing RB20 F1® 레이스 카
+                  </h3>
+
+                  <div class="price-area">
+                    <span class="set-price">725,940원</span>
+                  </div>
+
+                  <div class="badge-area">
+                    <span class="badge">무료배송</span>
+                    <span class="badge badge2">독점제품</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+
+          <!-- slide 5 -->
+          <div class="swiper-slide">
+            <article class="product-card">
+              <button class="bookmark-btn" aria-label="찜하기">♥</button>
+              <a href="#" class="product-link">
+                <div class="product-image">
+                  <img src="./images/set-image/set05.svg" alt="침대">
+
+                </div>
+
+                <div class="product-info">
+                  <h3 class="product-name">
+                    Oracle Red Bull Racing RB20 F1® 레이스 카
+                  </h3>
+
+                  <div class="price-area">
+                    <span class="set-price">725,940원</span>
+                  </div>
+
+                  <div class="badge-area">
+                    <span class="badge">무료배송</span>
+                    <span class="badge badge2">독점제품</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+
+          <!-- slide 6 -->
+          <div class="swiper-slide">
+            <article class="product-card">
+              <button class="bookmark-btn" aria-label="찜하기">♥</button>
+              <a href="#" class="product-link">
+                <div class="product-image">
+                  <img src="./images/set-image/set06.svg" alt="침대">
+
+                </div>
+
+                <div class="product-info">
+                  <h3 class="product-name">
+                    Oracle Red Bull Racing RB20 F1® 레이스 카
+                  </h3>
+
+                  <div class="price-area">
+                    <span class="set-price">725,940원</span>
+                  </div>
+
+                  <div class="badge-area">
+                    <span class="badge">무료배송</span>
+                    <span class="badge badge2">독점제품</span>
+                    <span class="badge best-badge">인기제품</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+
+          <!-- slide 7 -->
+          <div class="swiper-slide">
+            <article class="product-card">
+              <button class="bookmark-btn" aria-label="찜하기">♥</button>
+              <a href="#" class="product-link">
+                <div class="product-image">
+                  <img src="./images/set-image/set07.svg" alt="침대">
+
+                </div>
+
+                <div class="product-info">
+                  <h3 class="product-name">
+                    Oracle Red Bull Racing RB20 F1® 레이스 카
+                  </h3>
+
+                  <div class="price-area">
+                    <span class="set-price">725,940원</span>
+                  </div>
+
+                  <div class="badge-area">
+                    <span class="badge">무료배송</span>
+                    <span class="badge badge2">독점제품</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+      </div>
+
+      </div>
+
+    </section>
+
+
+
+    <section id="photo-container">
+      <div class="photo-text" data-aos="fade-up">
+        <h2>다른 사람의 작품을 보고 영감을 얻으세요.</h2>
+        <p>창의성을 돋우는 LEGO 세트로 새로운 조립 미션을 시작해 보세요.</p>
+      </div>
+
+      <div class="photo-box">
+        <div class="photo-1">
+          <img src="./images/photo-set/image 26.svg" alt="스타워즈">
+          <img src="./images/photo-set/image 29.svg" alt="캡슐머신">
+          <img src="./images/photo-set/캡처 10.svg" alt="그렘린">
+        </div>
+        <div class="photo-2">
+          <img src="./images/photo-set/image 28.jpg" alt="트리">
+          <img src="./images/photo-set/image 25.svg" alt="돛단배">
+          <img src="./images/photo-set/image 27.svg" alt="어드벤처캘린더">
+          <img src="./images/photo-set/image 28.jpg" alt="어드벤처캘린더">
+        </div>
+      </div>
+    </section>
+
+
+
+    <section id="willy-container">
+      <div class="willy-left">
+        <img class="gremlns1" data-aos="tilt-right" src="./images/willy/gremlns1.svg" alt="그렘린">
+        <img class="gremlns2" src="./images/willy/gremlns2.svg" alt="그렘린">
+      </div>
+
+      <div class="willy-text" data-aos="fade-up">
+        <h2>다시 깨어난 일상 속 즐거움</h2>
+        <p>그렘린 기즈모와 윌리 웡카와 초콜릿 공장 세트로 손끝에서 다시 살아나는<br>
+          영화의 마법을 경험해 보세요.</p>
+
+        <div class="willy-btn">
+          <button class="main-btn1">쇼핑하기</button>
+          <button class="main-btn1">자세히 보기</button>
+        </div>
+      </div>
+
+      <div class="willy-right">
+        <img src="./images/willy/willy1.svg" alt="윙카">
+        <img src="./images/willy/willy2.svg" data-aos="tilt-left" alt="윙카">
+        <img src="./images/willy/willy3.svg" alt="윙카">
+      </div>
+    </section>
+
+
+
+    <section id="explain-container">
+      <div class="explain-item left" data-aos="zoom-in-right">
+        <img src="./images/explain-image/explain01.svg" alt="설명이미지">
+        <div class="ex-text">
+          <h2>LEGO 선물 하기</h2>
+          <p>사랑하는 사람을 위해 특별한 기념일날 연령대, 가격대별로 선물해보세요. </p>
+          <button class="main-btn1">쇼핑하기</button>
+        </div>
+      </div>
+      <div class="explain-item right" data-aos="zoom-in-left">
+        <img src="./images/explain-image/explain02.svg" alt="설명이미지">
+        <div class="ex-text ex-text2">
+          <h2>궁금했던 이야기</h2>
+          <p>지금 바로 특별한 아이디어를 얻을 수 있는 글을 읽어보세요.</p>
+          <button class="main-btn1">자세히 보기</button>
+        </div>
+      </div>
+      <div class="explain-item left" data-aos="zoom-in-right">
+        <img src="./images/explain-image/explain03.svg" alt="설명이미지">
+        <div class="ex-text ex-text3">
+          <h2>LEGO APP</h2>
+          <p>레고 세트를 함께 만들어 보거나
+            3D 인터랙티브 지침으로 혼자서 진행해 보세요. </p>
+          <button class="main-btn1">다운받기</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <div class="footer-inner">
+
+      <div class="footer-col logo-col">
+        <img src="./images/LOGO.svg" alt="LEGO 로고" class="footer-logo">
+        <p>© 2026 LEGO Group. All rights reserved.</p>
+
+        <form class="footer-subscribe">
+          <label for="subscribe-email" class="subscribe-label">
+            마케팅 이메일 구독
+          </label>
+
+          <div class="subscribe-box">
+            <input type="email" id="subscribe-email" name="subscribe" placeholder="이메일 주소를 입력하세요"
+              aria-label="이메일 주소 입력" />
+            <button type="button">구독</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="footer-col">
+        <h3>회사정보</h3>
+        <ul>
+          <li><a href="#">지속가능한 사업</a></li>
+          <li><a href="#">공급망 투명성 선언</a></li>
+          <li><a href="#">레고 제품 인증</a></li>
+          <li><a href="#">레고 카탈로그</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>고객지원</h3>
+        <ul>
+          <li><a href="#">연락처</a></li>
+          <li><a href="#">문의하기</a></li>
+          <li><a href="#">배송안내</a></li>
+          <li><a href="#">결제방식</a></li>
+          <li><a href="#">반품/환불</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>명소</h3>
+        <ul>
+          <li><a href="#">레고 하우스</a></li>
+          <li><a href="#">레고 랜드파크</a></li>
+          <li><a href="#">레고 디스커버리 센터</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>기타정보</h3>
+        <ul>
+          <li><a href="#">레고 에듀케이션</a></li>
+          <li><a href="#">레고 아이디어</a></li>
+          <li><a href="#">레고 파운데이션</a></li>
+          <li><a href="#">제휴 프로그램</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <ul class="footer-legal">
+        <li><a href="#">개인정보처리방침</a></li>
+        <li><a href="#">쿠키</a></li>
+        <li><a href="#">법적고지</a></li>
+        <li><a href="#">이용약관</a></li>
+        <li><a href="#">접근성</a></li>
+        <li><button type="button" class="cookie-setting">쿠키 설정</button></li>
+      </ul>
+
+      <ul class="footer-sns">
+        <li>
+          <a href="#" aria-label="인스타그램">
+            <img src="./images/footer_logo/facebook.svg" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="#" aria-label="페이스북">
+            <img src="./images/footer_logo/insta.svg" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="#" aria-label="유튜브">
+            <img src="./images/footer_logo/utube.svg" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="#" aria-label="트위터">
+            <img src="./images/footer_logo/twitter.svg" alt="">
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </footer>
+
+
+
+
+
+
+
+
+
+    <!-- ----------------------------------- Smooth scroll ----------------------------------- -->
+    <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="js/smooth_scroll.js"></script>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./js/js.js"></script>
+
+
+</body>
+
+</html>

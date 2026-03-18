@@ -1,0 +1,11 @@
+body, header, footer, main, nav, section, article, aside, div, p, h1, h2, h3, h4, h5, h6, ol, ul, li, dl, dt, dd, table, caption, th, td, thead, tbody, tfoot, blockquote, form, fieldset, legend, input, button, select, figure, figcaption, address{
+  margin:0px;  padding:0px; box-sizing:border-box;
+}
+ol, ul{  list-style:none;  }
+a{   text-decoration:none; }
+fieldset, img{  border:0px;     }
+img{   display:block;  }
+address, em, i{   font-style:normal;   }
+h1, h2, h3, h4, h5, h6, strong, b{  font-weight:normal;  }
+input, button, select, textarea{  box-sizing:border-box;  }
+textarea{   resize:none;    }
